@@ -4,6 +4,8 @@
 raise-tower-bridge=github:hisi741/pxt-raise-tower-bridge
 ```
 
+### @hideDone true
+
 ## Introduction @showdialog
 
 # Raise Tower Bridge Workshop

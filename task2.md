@@ -5,6 +5,8 @@
 raise-tower-bridge=github:hisi741/pxt-raise-tower-bridge
 ```
 
+### @hideDone true
+
 
 ## Task 2 Video @showdialog
 
