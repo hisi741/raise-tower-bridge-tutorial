@@ -52,6 +52,7 @@ Now test your final program on the bridge model.
 Can your team make the bridge move smoothly and safely? 
 
 [Prev Task](https://makecode.microbit.org/#tutorial:https://github.com/hisi741/raise-tower-bridge-tutorial/task1)
+
 [Next task](https://makecode.microbit.org/#tutorial:https://github.com/hisi741/raise-tower-bridge-tutorial/task3)
 
 
