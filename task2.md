@@ -1,33 +1,29 @@
 # Raise Tower Bridge
 
-
 ```package
 raise-tower-bridge=github:hisi741/pxt-raise-tower-bridge
 ```
 
-
 ### @hideDone true
-
-
 
 ## Task 2 Video @showdialog
 
-Watch the video for Task 2. 
+Watch the video for Task 2.
 
 ![Random video 2](youtube:65ivoafQnzw)
 
 ## Task 2: Choose the bridge height
-
 Now you can choose the angle of the bridge.
 
-When you press **button A**, both sides of the bridge should rise to the **same height**.
+Button **A** should raise both sides to the same height.
 
-When you press **button B**, both sides of the bridge should lower back to the **horizontal position**.
+## Step 1: Edit your code
+Please set it so that pressing “A” **raises** both bridges, and pressing “B” **lowers** both bridges.
 
-Talk with your team:
-What is a good height for ships to pass safely?
+## Step 2: Test your code
+Press **A** to raise the bridge.
 
-Try different angles and test your bridge.
+Press **B** to lower the bridge.
 
 ```blocks
 input.onButtonPressed(Button.A, function () {
@@ -40,24 +36,15 @@ input.onButtonPressed(Button.B, function () {
 })
 ```
 
-
 ## Finish @showdialog
 
 Great work, engineer!
 
-You have programmed Tower Bridge to:
-
-* move with buttons
-* move to chosen angles
-* react automatically to a ship sensor
-
-Now test your final program on the bridge model.
-
-Can your team make the bridge move smoothly and safely? 
-
-[Prev Task](https://makecode.microbit.org/#tutorial:https://github.com/hisi741/raise-tower-bridge-tutorial/task1)
+Can your team make the bridge move smoothly and safely?
 
 [Next task](https://makecode.microbit.org/#tutorial:https://github.com/hisi741/raise-tower-bridge-tutorial/task3)
+
+[Prev Task](https://makecode.microbit.org/#tutorial:https://github.com/hisi741/raise-tower-bridge-tutorial/task1)
 
 
 ```template
@@ -66,6 +53,6 @@ input.onButtonPressed(Button.A, function () {
     towerBridge.setRightBasculeTo(50)
 })
 input.onButtonPressed(Button.B, function () {
-    towerBridge.setRightBasculeTo(-15)
+    towerBridge.setLeftBasculeTo(-10)
 })
 ```
