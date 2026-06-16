@@ -73,8 +73,6 @@ input.onButtonPressed(Button.B, function () {
 
 Great work, engineer!
 
-You made both sides of Tower Bridge move.
-
 [Next task](https://makecode.microbit.org/#tutorial:https://github.com/hisi741/raise-tower-bridge-tutorial/task2)
 
 ```template
