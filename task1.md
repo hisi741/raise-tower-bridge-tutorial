@@ -22,14 +22,11 @@ Work carefully, test your code, and talk with your team.
 
 Watch the video for Task 1.
 
-![Random Video 1](youtube:65ivoafQnzw)
+<video src="https://raw.githubusercontent.com/hisi741/raise-tower-bridge-tutorial/main/video/rand_vid1.mp4" controls width="20%" muted playsinline autoplay preload="auto"></video>
 
 ## Task 1: Raise and lower the bridge
 
 <img src="https://raw.githubusercontent.com/hisi741/raise-tower-bridge-tutorial/main/pics/rand_pic1.JPG" width="30%">
-
-
-<video src="https://raw.githubusercontent.com/hisi741/raise-tower-bridge-tutorial/main/videos/rand_vid1.MOV" muted playsinline autoplay preload="auto">
 
 Make the bridge respond to the micro:bit buttons.
 
