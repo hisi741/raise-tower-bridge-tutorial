@@ -26,7 +26,7 @@ Watch the video for Task 1.
 
 ## Task 1: Raise and lower the bridge
 
-![Random picture 1](https://github.com/hisi741/raise-tower-bridge-tutorial/tree/main/pics/rand_pic1.jpg)
+![Random picture 1](https://github.com/hisi741/raise-tower-bridge-tutorial/blob/main/pics/rand_pic1.JPG)
 
 Make the bridge respond to the micro:bit buttons.
 
