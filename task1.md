@@ -16,13 +16,6 @@ Press the micro:bit buttons and watch what happens.
 
 Your first job is to make both sides of the bridge move.
 
-<!-- ## Task 1 Video @showdialog
-
-Watch the video for Task 1.
-
-How to show video:
-<video src="https://raw.githubusercontent.com/hisi741/raise-tower-bridge-tutorial/main/video/rand_vid1.mp4" controls width="20%" muted playsinline autoplay preload="auto"></video>  -->
-
 ## Step 1:
 Press **A**, then **B** on the micro:bit.
 

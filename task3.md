@@ -6,39 +6,70 @@ raise-tower-bridge=github:hisi741/pxt-raise-tower-bridge
 
 ### @hideDone true
 
-## Task 3 Video @showdialog
+## Introduction @showdialog
 
-Watch the video for Task 3.
+# Task 3: Choose the Height
 
-![Random Video 3](youtube:65ivoafQnzw)
+Different ships need different bridge heights.
 
-## Task 3: Use the ship sensor
+A small ship only needs a small opening.
 
-Now make the bridge work automatically.
+A taller ship needs a bigger opening.
 
-If the sensor detects a ship, the bridge should go **up**.
+## Step 1 @showdialog
 
-## Step 1: Edit your code
+# Bridge angles
 
-Please set it so that when a ship is detected, both sides of the bridge go **up**.
+The bridge is closed at **0°**.
 
-When there is no ship, both sides of the bridge should go **down**.
+It opens higher at **30°** and **60°**.
 
-## Step 2: Test your code
+<img src="https://raw.githubusercontent.com/hisi741/raise-tower-bridge-tutorial/main/pics/example_0deg.JPG" height="160px">
+<img src="https://raw.githubusercontent.com/hisi741/raise-tower-bridge-tutorial/main/pics/example_30deg.JPG" height="160px">
+<img src="https://raw.githubusercontent.com/hisi741/raise-tower-bridge-tutorial/main/pics/example_60deg.JPG" height="160px">
 
-Use the ship sensor to test your bridge.
+## Step 2
 
-Check that the bridge rises and lowers automatically.
+Press **A**.
+
+The bridge opens to **30°**.
+
+## Step 3
+
+Find the code for button **B**.
+
+Change **0°** to **60°**.
+
+## Step 4
+
+Press **B**.
+
+The bridge should open higher.
+
+## Step 5
+
+Add code for **A+B**.
+
+Close the bridge to **0°**.
+
+## Step 6
+
+Test all buttons.
+
+A: 30°, B: 60°, A+B: 0°.
 
 ```blocks
-basic.forever(function () {
-    if (towerBridge.shipComing()) {
-        towerBridge.raiseLeftBascule()
-        towerBridge.raiseRightBascule()
-    } else {
-        towerBridge.lowerLeftBascule()
-        towerBridge.lowerRightBascule()
-    }
+input.onButtonPressed(Button.A, function () {
+    towerBridge.moveBasculeTo(BridgeSide.Left, 30)
+    towerBridge.moveBasculeTo(BridgeSide.Right, 30)
+})
+input.onButtonPressed(Button.B, function () {
+    towerBridge.moveBasculeTo(BridgeSide.Left, 60)
+    towerBridge.moveBasculeTo(BridgeSide.Right, 60)
+})
+input.onButtonPressed(Button.AB, function () {
+    towerBridge.moveBasculeTo(BridgeSide.Left, 0)
+    towerBridge.moveBasculeTo(BridgeSide.Right, 0)
 })
 ```
 
@@ -46,23 +77,19 @@ basic.forever(function () {
 
 Great work, engineer!
 
-You have programmed Tower Bridge to:
+Now your bridge can open to different heights.
 
-* move with buttons
-* move to chosen angles
-* react automatically to a ship sensor
-
-Now test your final program on the bridge model.
-
-Can your team make the bridge move smoothly and safely?
-
-[Prev task](https://makecode.microbit.org/#tutorial:https://github.com/hisi741/raise-tower-bridge-tutorial/task2)
 [Next task](https://makecode.microbit.org/#tutorial:https://github.com/hisi741/raise-tower-bridge-tutorial/task4)
 
 ```template
-basic.forever(function () {
-    if (towerBridge.shipComing()) {
-    } else {
-    }
+input.onButtonPressed(Button.A, function () {
+    towerBridge.moveBasculeTo(BridgeSide.Left, 30)
+    towerBridge.moveBasculeTo(BridgeSide.Right, 30)
+})
+input.onButtonPressed(Button.B, function () {
+    towerBridge.moveBasculeTo(BridgeSide.Left, 0)
+    towerBridge.moveBasculeTo(BridgeSide.Right, 0)
+})
+input.onButtonPressed(Button.AB, function () {
 })
 ```

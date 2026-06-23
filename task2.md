@@ -38,6 +38,14 @@ Add a **pause** after the bridge starts moving.
 
 Use **2000 ms**.
 
+```blocks
+input.onButtonPressed(Button.A, function () {
+    towerBridge.setBasculeMoveDirection(BridgeSide.Left, BasculeDirection.Raise)
+    towerBridge.setBasculeMoveDirection(BridgeSide.Right, BasculeDirection.Raise)
+    basic.pause(2000)
+})
+```
+
 ## Step 4 @showdialog
 
 # Stop the motors
@@ -53,6 +61,16 @@ Do this for both the left and right bascules.
 After the pause, set both speeds to **0**.
 
 This stops the bridge.
+
+```blocks
+input.onButtonPressed(Button.A, function () {
+    towerBridge.setBasculeMoveDirection(BridgeSide.Left, BasculeDirection.Raise)
+    towerBridge.setBasculeMoveDirection(BridgeSide.Right, BasculeDirection.Raise)
+    basic.pause(2000)
+    towerBridge.setBasculeMotorSpeed(BridgeSide.Left, 0)
+    towerBridge.setBasculeMotorSpeed(BridgeSide.Right, 0)
+})
+```
 
 ## Step 6
 
