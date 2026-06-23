@@ -21,29 +21,29 @@ Your first job is to make both sides of the bridge move.
 Watch the video for Task 1.
 
 How to show video:
-<video src="https://raw.githubusercontent.com/hisi741/raise-tower-bridge-tutorial/main/video/rand_vid1.mp4" controls width="20%" muted playsinline autoplay preload="auto"></video> 
-To show image:
-<img src="https://raw.githubusercontent.com/hisi741/raise-tower-bridge-tutorial/main/pics/rand_pic1.JPG" width="30%"> -->
+<video src="https://raw.githubusercontent.com/hisi741/raise-tower-bridge-tutorial/main/video/rand_vid1.mp4" controls width="20%" muted playsinline autoplay preload="auto"></video>  -->
 
 ## Step 1:
-Press **A** or **B** on the micro:bit.
+Press **A**, then **B** on the micro:bit.
 
 What moves?
 
-## Step 2:
+## Step 2 @showdialog
 
-<img src="https://raw.githubusercontent.com/hisi741/raise-tower-bridge-tutorial/main/pics/example_add.JPG" height="10%">
-<img src="https://raw.githubusercontent.com/hisi741/raise-tower-bridge-tutorial/main/pics/edample_edit.JPG" height="10%">
+<img src="https://raw.githubusercontent.com/hisi741/raise-tower-bridge-tutorial/main/pics/example_add.png" height="200px">
+<img src="https://raw.githubusercontent.com/hisi741/raise-tower-bridge-tutorial/main/pics/example_edit.png" height="200px">
 
-Add and edit block to raise the **right** bascule.
+Add and edit block to raise the **both** bascules.
 
 ## Step 3:
 
-Find the code for **button B**.
+Make button **B** lower **both bascules**.
+
+Use the same idea.
 
 ## Step 4:
 
-Press **A** and **B** to test the bridge.
+Press **A**, then **B** to test the bridge.
 
 ```blocks
 input.onButtonPressed(Button.A, function () {
