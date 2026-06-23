@@ -6,91 +6,93 @@ raise-tower-bridge=github:hisi741/pxt-raise-tower-bridge
 
 ### @hideDone true
 
-## Free Build @showdialog
+## Introduction @showdialog
 
-# Free Build: Design Your Own Bridge Program
+# Task 4: Emergency Stop
 
-You are now in control of Tower Bridge.
+Engineers must think about safety.
 
-Design your own bridge program.
+A real machine needs a way to stop quickly.
 
-There is no single correct answer.
+In this task, make **A+B** stop the bridge.
 
-## Your challenge
+<!-- ## Task 4 Video @showdialog
 
-Create a program that controls the bridge safely and clearly.
+Watch the video for Task 4.  -->
 
-Think about how people can understand what your program is doing.
+## Step 1 @showdialog
 
-## Useful blocks
+# Emergency stop
 
-You can use any of the Tower Bridge blocks.
+An emergency stop stops a machine quickly.
 
-You can also use other blocks to control when and how the bridge moves.
+Press **A+B** to stop both bascules.
 
-```ghost
-input.onButtonPressed(Button.A, function () {})
-input.onButtonPressed(Button.B, function () {})
-input.onButtonPressed(Button.AB, function () {})
-input.onGesture(Gesture.Shake, function () {})
-input.lightLevel()
-input.temperature()
-input.soundLevel()
+<img src="https://raw.githubusercontent.com/hisi741/raise-tower-bridge-tutorial/main/pics/example_emergency_stop.JPG" height="220px">
 
-basic.forever(function () {})
-basic.pause(100)
-basic.showIcon(IconNames.Yes)
-basic.showIcon(IconNames.No)
-basic.showNumber(0)
-basic.showString("OPEN")
-basic.clearScreen()
+## Step 2
 
-if (true) {} else {}
-true
-false
-0 == 0
-0 < 1
-0 > 1
-true && false
-true || false
-!true
+Press **A** to start opening.
 
-for (let index = 0; index < 4; index++) {}
-while (false) {}
-for (let value of [0, 1, 2]) {}
+Then press **A+B**.
 
-let angle = 0
-angle = 45
-angle += 1
-Math.randomRange(0, 86)
+## Step 3
 
-music.playTone(262, music.beat(BeatFraction.Whole))
-music.rest(music.beat(BeatFraction.Whole))
+Add a stop block inside **A+B**.
 
-towerBridge.raiseLeftBascule()
-towerBridge.raiseRightBascule()
-towerBridge.lowerLeftBascule()
-towerBridge.lowerRightBascule()
-towerBridge.setLeftBasculeTo(45)
-towerBridge.setRightBasculeTo(45)
-towerBridge.shipComing()
-```
+Stop the **left** bascule.
 
-```template
-basic.forever(function () {
-    
+## Step 4
+
+Add another stop block.
+
+Stop the **right** bascule.
+
+## Step 5
+
+Show a warning icon.
+
+Use it after the stop blocks.
+
+## Step 6
+
+Test your emergency stop.
+
+Can you stop the bridge quickly?
+
+```blocks
+input.onButtonPressed(Button.A, function () {
+    basculeMotors.setBasculeMoveDirection(BridgeSide.Left, BasculeDirection.Raise)
+    basculeMotors.setBasculeMoveDirection(BridgeSide.Right, BasculeDirection.Raise)
+})
+input.onButtonPressed(Button.B, function () {
+    basculeMotors.setBasculeMoveDirection(BridgeSide.Left, BasculeDirection.Lower)
+    basculeMotors.setBasculeMoveDirection(BridgeSide.Right, BasculeDirection.Lower)
+})
+input.onButtonPressed(Button.AB, function () {
+    basculeMotors.stopBasculeMoving(BridgeSide.Left)
+    basculeMotors.stopBasculeMoving(BridgeSide.Right)
+    basic.showIcon(IconNames.No)
 })
 ```
-
-## Improve your bridge
-
-Once your first idea works, improve it.
-
-Can you make it safer? clearer? more realistic? more creative?
 
 ## Finish @showdialog
 
 Great work, engineer!
 
-[Back to Task 3](https://makecode.microbit.org/#tutorial:https://github.com/hisi741/raise-tower-bridge-tutorial/task3)
+Now your bridge has an emergency stop.
 
+[Next task](https://makecode.microbit.org/#tutorial:https://github.com/hisi741/raise-tower-bridge-tutorial/task5)
+
+```template
+input.onButtonPressed(Button.A, function () {
+    basculeMotors.setBasculeMoveDirection(BridgeSide.Left, BasculeDirection.Raise)
+    basculeMotors.setBasculeMoveDirection(BridgeSide.Right, BasculeDirection.Raise)
+})
+input.onButtonPressed(Button.B, function () {
+    basculeMotors.setBasculeMoveDirection(BridgeSide.Left, BasculeDirection.Lower)
+    basculeMotors.setBasculeMoveDirection(BridgeSide.Right, BasculeDirection.Lower)
+})
+input.onButtonPressed(Button.AB, function () {
+})
+```
