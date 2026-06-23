@@ -40,15 +40,6 @@ Press **A**, then **B** to test the bridge.
 
 ```blocks
 input.onButtonPressed(Button.A, function () {
-    towerBridge.setBasculeMoveDirection(BridgeSide.Left, BasculeDirection.Raise)
-    towerBridge.setBasculeMoveDirection(BridgeSide.Right, BasculeDirection.Raise)
-})
-input.onButtonPressed(Button.B, function () {
-    towerBridge.setBasculeMoveDirection(BridgeSide.Left, BasculeDirection.Lower)
-    towerBridge.setBasculeMoveDirection(BridgeSide.Right, BasculeDirection.Lower)
-})
-
-input.onButtonPressed(Button.A, function () {
     basculeMotors.raiseLowerBascule(BridgeSide.Left, BasculeDirection.Raise)
     basculeMotors.raiseLowerBascule(BridgeSide.Right, BasculeDirection.Raise)
 })
