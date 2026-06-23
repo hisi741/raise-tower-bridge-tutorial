@@ -32,8 +32,8 @@ What moves?
 
 ## Step 2:
 
-<img src="https://raw.githubusercontent.com/hisi741/raise-tower-bridge-tutorial/main/pics/example_add.JPG" height="10%"> -->
-<img src="https://raw.githubusercontent.com/hisi741/raise-tower-bridge-tutorial/main/pics/edample_edit.JPG" height="10%"> -->
+<img src="https://raw.githubusercontent.com/hisi741/raise-tower-bridge-tutorial/main/pics/example_add.JPG" height="10%">
+<img src="https://raw.githubusercontent.com/hisi741/raise-tower-bridge-tutorial/main/pics/edample_edit.JPG" height="10%">
 
 Add and edit block to raise the **right** bascule.
 
