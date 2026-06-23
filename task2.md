@@ -40,8 +40,8 @@ Use **2000 ms**.
 
 ```blocks
 input.onButtonPressed(Button.A, function () {
-    towerBridge.setBasculeMoveDirection(BridgeSide.Left, BasculeDirection.Raise)
-    towerBridge.setBasculeMoveDirection(BridgeSide.Right, BasculeDirection.Raise)
+    basculeMotors.setBasculeMoveDirection(BridgeSide.Left, BasculeDirection.Raise)
+    basculeMotors.setBasculeMoveDirection(BridgeSide.Right, BasculeDirection.Raise)
     basic.pause(2000)
 })
 ```
@@ -50,7 +50,7 @@ input.onButtonPressed(Button.A, function () {
 
 # Stop the motors
 
-To stop a bascule, set its speed to **0**.
+To stop a bascule, use the stop block.
 
 Do this for both the left and right bascules.
 
@@ -58,17 +58,17 @@ Do this for both the left and right bascules.
 
 ## Step 5
 
-After the pause, set both speeds to **0**.
+After the pause, stop both bascules.
 
 This stops the bridge.
 
 ```blocks
 input.onButtonPressed(Button.A, function () {
-    towerBridge.setBasculeMoveDirection(BridgeSide.Left, BasculeDirection.Raise)
-    towerBridge.setBasculeMoveDirection(BridgeSide.Right, BasculeDirection.Raise)
+    basculeMotors.setBasculeMoveDirection(BridgeSide.Left, BasculeDirection.Raise)
+    basculeMotors.setBasculeMoveDirection(BridgeSide.Right, BasculeDirection.Raise)
     basic.pause(2000)
-    towerBridge.setBasculeMotorSpeed(BridgeSide.Left, 0)
-    towerBridge.setBasculeMotorSpeed(BridgeSide.Right, 0)
+    basculeMotors.stopBasculeMoving(BridgeSide.Left)
+    basculeMotors.stopBasculeMoving(BridgeSide.Right)
 })
 ```
 
@@ -80,18 +80,18 @@ Then test both buttons.
 
 ```blocks
 input.onButtonPressed(Button.A, function () {
-    towerBridge.setBasculeMoveDirection(BridgeSide.Left, BasculeDirection.Raise)
-    towerBridge.setBasculeMoveDirection(BridgeSide.Right, BasculeDirection.Raise)
+    basculeMotors.setBasculeMoveDirection(BridgeSide.Left, BasculeDirection.Raise)
+    basculeMotors.setBasculeMoveDirection(BridgeSide.Right, BasculeDirection.Raise)
     basic.pause(2000)
-    towerBridge.setBasculeMotorSpeed(BridgeSide.Left, 0)
-    towerBridge.setBasculeMotorSpeed(BridgeSide.Right, 0)
+    basculeMotors.stopBasculeMoving(BridgeSide.Left)
+    basculeMotors.stopBasculeMoving(BridgeSide.Right)
 })
 input.onButtonPressed(Button.B, function () {
-    towerBridge.setBasculeMoveDirection(BridgeSide.Left, BasculeDirection.Lower)
-    towerBridge.setBasculeMoveDirection(BridgeSide.Right, BasculeDirection.Lower)
+    basculeMotors.setBasculeMoveDirection(BridgeSide.Left, BasculeDirection.Lower)
+    basculeMotors.setBasculeMoveDirection(BridgeSide.Right, BasculeDirection.Lower)
     basic.pause(2000)
-    towerBridge.setBasculeMotorSpeed(BridgeSide.Left, 0)
-    towerBridge.setBasculeMotorSpeed(BridgeSide.Right, 0)
+    basculeMotors.stopBasculeMoving(BridgeSide.Left)
+    basculeMotors.stopBasculeMoving(BridgeSide.Right)
 })
 ```
 
@@ -105,11 +105,11 @@ Now your bridge can move and stop safely.
 
 ```template
 input.onButtonPressed(Button.A, function () {
-    towerBridge.setBasculeMoveDirection(BridgeSide.Left, BasculeDirection.Raise)
-    towerBridge.setBasculeMoveDirection(BridgeSide.Right, BasculeDirection.Raise)
+    basculeMotors.setBasculeMoveDirection(BridgeSide.Left, BasculeDirection.Raise)
+    basculeMotors.setBasculeMoveDirection(BridgeSide.Right, BasculeDirection.Raise)
 })
 input.onButtonPressed(Button.B, function () {
-    towerBridge.setBasculeMoveDirection(BridgeSide.Left, BasculeDirection.Lower)
-    towerBridge.setBasculeMoveDirection(BridgeSide.Right, BasculeDirection.Lower)
+    basculeMotors.setBasculeMoveDirection(BridgeSide.Left, BasculeDirection.Lower)
+    basculeMotors.setBasculeMoveDirection(BridgeSide.Right, BasculeDirection.Lower)
 })
 ```

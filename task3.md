@@ -60,16 +60,16 @@ A: 30°, B: 60°, A+B: 0°.
 
 ```blocks
 input.onButtonPressed(Button.A, function () {
-    towerBridge.moveBasculeTo(BridgeSide.Left, 30)
-    towerBridge.moveBasculeTo(BridgeSide.Right, 30)
+    basculeMotors.moveBasculeTo(BridgeSide.Left, 30)
+    basculeMotors.moveBasculeTo(BridgeSide.Right, 30)
 })
 input.onButtonPressed(Button.B, function () {
-    towerBridge.moveBasculeTo(BridgeSide.Left, 60)
-    towerBridge.moveBasculeTo(BridgeSide.Right, 60)
+    basculeMotors.moveBasculeTo(BridgeSide.Left, 60)
+    basculeMotors.moveBasculeTo(BridgeSide.Right, 60)
 })
 input.onButtonPressed(Button.AB, function () {
-    towerBridge.moveBasculeTo(BridgeSide.Left, 0)
-    towerBridge.moveBasculeTo(BridgeSide.Right, 0)
+    basculeMotors.moveBasculeTo(BridgeSide.Left, 0)
+    basculeMotors.moveBasculeTo(BridgeSide.Right, 0)
 })
 ```
 
@@ -83,12 +83,12 @@ Now your bridge can open to different heights.
 
 ```template
 input.onButtonPressed(Button.A, function () {
-    towerBridge.moveBasculeTo(BridgeSide.Left, 30)
-    towerBridge.moveBasculeTo(BridgeSide.Right, 30)
+    basculeMotors.moveBasculeTo(BridgeSide.Left, 30)
+    basculeMotors.moveBasculeTo(BridgeSide.Right, 30)
 })
 input.onButtonPressed(Button.B, function () {
-    towerBridge.moveBasculeTo(BridgeSide.Left, 0)
-    towerBridge.moveBasculeTo(BridgeSide.Right, 0)
+    basculeMotors.moveBasculeTo(BridgeSide.Left, 0)
+    basculeMotors.moveBasculeTo(BridgeSide.Right, 0)
 })
 input.onButtonPressed(Button.AB, function () {
 })
