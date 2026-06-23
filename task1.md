@@ -8,64 +8,51 @@ raise-tower-bridge=github:hisi741/pxt-raise-tower-bridge
 
 ## Introduction @showdialog
 
-# Raise Tower Bridge Workshop
+# Task 1: Move the Bridge
 
-You are an engineer working at **Tower Bridge**.
+You are an engineer at Tower Bridge.
 
-Large ships need to pass safely along the River Thames.
+Press the micro:bit buttons and watch what happens.
 
-Your job is to program the bridge so the bascules can rise and lower at the right time.
+Your first job is to make both sides of the bridge move.
 
-Work carefully, test your code, and talk with your team.
-
-## Task 1 Video @showdialog
+<!-- ## Task 1 Video @showdialog
 
 Watch the video for Task 1.
 
-<video src="https://raw.githubusercontent.com/hisi741/raise-tower-bridge-tutorial/main/video/rand_vid1.mp4" controls width="20%" muted playsinline autoplay preload="auto"></video>
+How to show video:
+<video src="https://raw.githubusercontent.com/hisi741/raise-tower-bridge-tutorial/main/video/rand_vid1.mp4" controls width="20%" muted playsinline autoplay preload="auto"></video> 
+To show image:
+<img src="https://raw.githubusercontent.com/hisi741/raise-tower-bridge-tutorial/main/pics/rand_pic1.JPG" width="30%"> -->
 
-## Task 1: Raise and lower the bridge
+## Step 1:
+Press **A** or **B** on the micro:bit.
 
-<!-- <img src="https://raw.githubusercontent.com/hisi741/raise-tower-bridge-tutorial/main/pics/rand_pic1.JPG" width="30%"> -->
+What moves?
 
-Button **A** should raise the bridge.
+## Step 2:
 
-## Step 1: Look at button A
+<img src="https://raw.githubusercontent.com/hisi741/raise-tower-bridge-tutorial/main/pics/example_add.JPG" height="10%"> -->
+<img src="https://raw.githubusercontent.com/hisi741/raise-tower-bridge-tutorial/main/pics/edample_edit.JPG" height="10%"> -->
 
-Find the code for **button A**.
+Add and edit block to raise the **right** bascule.
 
-It already raises the **left** side of the bridge.
-
-## Step 2: Raise the right side
-
-Add a block under it.
-
-Make **button A** raise the **right** side too.
-
-## Step 3: Look at button B
+## Step 3:
 
 Find the code for **button B**.
 
-It already lowers the **left** side of the bridge.
-
-## Step 4: Lower the right side
-
-Add a block under it.
-
-Make **button B** lower the **right** side too.
-
-## Step 5: Test your code
+## Step 4:
 
 Press **A** and **B** to test the bridge.
 
 ```blocks
 input.onButtonPressed(Button.A, function () {
-    towerBridge.raiseLeftBascule()
-    towerBridge.raiseRightBascule()
+    towerBridge.setBasculeMoveDirection(BridgeSide.Left, BasculeDirection.Raise)
+    towerBridge.setBasculeMoveDirection(BridgeSide.Right, BasculeDirection.Raise)
 })
 input.onButtonPressed(Button.B, function () {
-    towerBridge.lowerLeftBascule()
-    towerBridge.lowerRightBascule()
+    towerBridge.setBasculeMoveDirection(BridgeSide.Left, BasculeDirection.Lower)
+    towerBridge.setBasculeMoveDirection(BridgeSide.Right, BasculeDirection.Lower)
 })
 ```
 
@@ -77,9 +64,9 @@ Great work, engineer!
 
 ```template
 input.onButtonPressed(Button.A, function () {
-    towerBridge.raiseLeftBascule()
+    towerBridge.setBasculeMoveDirection(BridgeSide.Left, BasculeDirection.Raise)
 })
 input.onButtonPressed(Button.B, function () {
-    towerBridge.lowerLeftBascule()
+    towerBridge.setBasculeMoveDirection(BridgeSide.Left, BasculeDirection.Lower)
 })
 ```
