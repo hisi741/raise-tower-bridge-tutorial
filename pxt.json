@@ -1,16 +1,25 @@
 {
-  "name": "raise-tower-bridge-tutorial",
-  "description": "Raise Tower Bridge tutorial",
-  "files": [
-    "main.ts",
-    "README.md",
-    "task1.md",
-    "task2.md",
-    "task3.md",
-    "task4.md",
-    "task5.md"
-  ],
-  "dependencies": {
-    "core": "*"
-  }
+    "name": "raise-tower-bridge-tutorial",
+    "description": "Raise Tower Bridge tutorial",
+    "dependencies": {
+        "core": "*",
+        "microphone": "*"
+    },
+    "files": [
+        "main.ts",
+        "README.md",
+        "task1.md",
+        "task2.md",
+        "task3.md",
+        "task4.md",
+        "task5.md"
+    ],
+    "targetVersions": {
+        "target": "8.0.22",
+        "targetId": "microbit"
+    },
+    "supportedTargets": [
+        "microbit"
+    ],
+    "preferredEditor": "tsprj"
 }

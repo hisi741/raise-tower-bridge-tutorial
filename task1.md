@@ -1,10 +1,9 @@
 # Raise Tower Bridge
 
-```package
-raise-tower-bridge=github:hisi741/pxt-raise-tower-bridge
-```
-
 ### @hideDone true
+
+```package
+raise-tower-bridge=github:hisi741/pxt-raise-tower-bridge```
 
 ## Introduction @showdialog
 
@@ -53,7 +52,7 @@ input.onButtonPressed(Button.B, function () {
 
 Great work, engineer!
 
-[Next task](https://makecode.microbit.org/#tutorial:https://github.com/hisi741/raise-tower-bridge-tutorial/2)
+[Next task](https://makecode.microbit.org/#tutorial:https://github.com/hisi741/raise-tower-bridge-tutorial/task2)
 
 ```template
 input.onButtonPressed(Button.A, function () {

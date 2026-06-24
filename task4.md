@@ -1,78 +1,77 @@
 # Raise Tower Bridge
 
+### @hideDone true
+
 ```package
 raise-tower-bridge=github:hisi741/pxt-raise-tower-bridge
 ```
 
-### @hideDone true
-
 ## Introduction @showdialog
 
-# Task 4: Emergency Stop
+# Task 4: Automatic Bridge
 
-Engineers must think about safety.
+Great work! Your bridge can open to different angles.
 
-A real machine needs a way to stop quickly.
+Now make the bridge use a sensor.
 
-In this task, make **A+B** stop the bridge.
+If a ship is sailing through, the bridge should open.
 
-<!-- ## Task 4 Video @showdialog
-
-Watch the video for Task 4.  -->
+If there is no ship, the bridge should close.
 
 ## Step 1 @showdialog
 
-# Emergency stop
+# The ship sensor
 
-An emergency stop stops a machine quickly.
+The bridge can check if a ship is sailing through.
 
-Press **A+B** to stop both bascules.
+This block asks a question: **is there a ship?**
 
-<img src="https://raw.githubusercontent.com/hisi741/raise-tower-bridge-tutorial/main/pics/example_emergency_stop.JPG" height="220px">
+<img src="https://raw.githubusercontent.com/hisi741/raise-tower-bridge-tutorial/main/pics/example_ship_sensor.png" height="200px">
 
 ## Step 2
 
-Press **A** to start opening.
+Look at the **if** block.
 
-Then press **A+B**.
+It asks if a ship is sailing through.
 
 ## Step 3
 
-Add a stop block inside **A+B**.
+Inside **if**, open both bascules to **60°**.
 
-Stop the **left** bascule.
+This lets the ship pass.
+
+```blocks
+basic.forever(function () {
+    if (bridgeSensors.isShipPresent()) {
+        basculeMotors.moveBasculeTo(BridgeSide.Left, 60)
+        basculeMotors.moveBasculeTo(BridgeSide.Right, 60)
+    } else {
+    	
+    }
+})
+```
 
 ## Step 4
 
-Add another stop block.
+Inside **else**, close both bascules to **0°**.
 
-Stop the **right** bascule.
+This happens when there is no ship.
 
 ## Step 5
 
-Show a warning icon.
+Test with the ship.
 
-Use it after the stop blocks.
-
-## Step 6
-
-Test your emergency stop.
-
-Can you stop the bridge quickly?
+Ship present: open. No ship: close.
 
 ```blocks
-input.onButtonPressed(Button.A, function () {
-    basculeMotors.setBasculeMoveDirection(BridgeSide.Left, BasculeDirection.Raise)
-    basculeMotors.setBasculeMoveDirection(BridgeSide.Right, BasculeDirection.Raise)
-})
-input.onButtonPressed(Button.B, function () {
-    basculeMotors.setBasculeMoveDirection(BridgeSide.Left, BasculeDirection.Lower)
-    basculeMotors.setBasculeMoveDirection(BridgeSide.Right, BasculeDirection.Lower)
-})
-input.onButtonPressed(Button.AB, function () {
-    basculeMotors.stopBasculeMoving(BridgeSide.Left)
-    basculeMotors.stopBasculeMoving(BridgeSide.Right)
-    basic.showIcon(IconNames.No)
+basic.forever(function () {
+    if (bridgeSensors.isShipPresent()) {
+        basculeMotors.moveBasculeTo(BridgeSide.Left, 60)
+        basculeMotors.moveBasculeTo(BridgeSide.Right, 60)
+    } else {
+        basculeMotors.moveBasculeTo(BridgeSide.Left, 0)
+        basculeMotors.moveBasculeTo(BridgeSide.Right, 0)
+    }
 })
 ```
 
@@ -80,19 +79,16 @@ input.onButtonPressed(Button.AB, function () {
 
 Great work, engineer!
 
-Now your bridge has an emergency stop.
+Now your bridge can react to a ship by itself.
 
 [Next task](https://makecode.microbit.org/#tutorial:https://github.com/hisi741/raise-tower-bridge-tutorial/task5)
 
 ```template
-input.onButtonPressed(Button.A, function () {
-    basculeMotors.setBasculeMoveDirection(BridgeSide.Left, BasculeDirection.Raise)
-    basculeMotors.setBasculeMoveDirection(BridgeSide.Right, BasculeDirection.Raise)
-})
-input.onButtonPressed(Button.B, function () {
-    basculeMotors.setBasculeMoveDirection(BridgeSide.Left, BasculeDirection.Lower)
-    basculeMotors.setBasculeMoveDirection(BridgeSide.Right, BasculeDirection.Lower)
-})
-input.onButtonPressed(Button.AB, function () {
+basic.forever(function () {
+    if (bridgeSensors.isShipPresent()) {
+    	
+    } else {
+    	
+    }
 })
 ```

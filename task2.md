@@ -1,10 +1,11 @@
 # Raise Tower Bridge
 
+### @hideDone true
+
 ```package
 raise-tower-bridge=github:hisi741/pxt-raise-tower-bridge
 ```
 
-### @hideDone true
 
 ## Introduction @showdialog
 
@@ -101,7 +102,7 @@ Great work, engineer!
 
 Now your bridge can move and stop safely.
 
-[Next task](https://makecode.microbit.org/#tutorial:https://github.com/hisi741/raise-tower-bridge-tutorial/3)
+[Next task](https://makecode.microbit.org/#tutorial:https://github.com/hisi741/raise-tower-bridge-tutorial/task3)
 
 ```template
 input.onButtonPressed(Button.A, function () {
