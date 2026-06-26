@@ -114,3 +114,14 @@ input.onButtonPressed(Button.B, function () {
     basculeMotors.setBasculeMoveDirection(BridgeSide.Right, BasculeDirection.Lower)
 })
 ```
+
+```ghost
+input.onButtonPressed(Button.A, function () {
+    basculeMotors.raiseLowerBascule(BridgeSide.Left, BasculeDirection.Raise)
+    basculeMotors.raiseLowerBascule(BridgeSide.Right, BasculeDirection.Raise)
+})
+input.onButtonPressed(Button.B, function () {
+    basculeMotors.raiseLowerBascule(BridgeSide.Left, BasculeDirection.Lower)
+    basculeMotors.raiseLowerBascule(BridgeSide.Right, BasculeDirection.Lower)
+})
+```

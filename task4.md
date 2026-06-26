@@ -92,3 +92,41 @@ basic.forever(function () {
     }
 })
 ```
+
+
+```ghost
+input.onButtonPressed(Button.A, function () {
+    basculeMotors.raiseLowerBascule(BridgeSide.Left, BasculeDirection.Raise)
+    basculeMotors.raiseLowerBascule(BridgeSide.Right, BasculeDirection.Raise)
+})
+input.onButtonPressed(Button.B, function () {
+    basculeMotors.raiseLowerBascule(BridgeSide.Left, BasculeDirection.Lower)
+    basculeMotors.raiseLowerBascule(BridgeSide.Right, BasculeDirection.Lower)
+})
+input.onButtonPressed(Button.A, function () {
+    basculeMotors.setBasculeMoveDirection(BridgeSide.Left, BasculeDirection.Raise)
+    basculeMotors.setBasculeMoveDirection(BridgeSide.Right, BasculeDirection.Raise)
+    basic.pause(2000)
+    basculeMotors.stopBasculeMoving(BridgeSide.Left)
+    basculeMotors.stopBasculeMoving(BridgeSide.Right)
+})
+input.onButtonPressed(Button.B, function () {
+    basculeMotors.setBasculeMoveDirection(BridgeSide.Left, BasculeDirection.Lower)
+    basculeMotors.setBasculeMoveDirection(BridgeSide.Right, BasculeDirection.Lower)
+    basic.pause(2000)
+    basculeMotors.stopBasculeMoving(BridgeSide.Left)
+    basculeMotors.stopBasculeMoving(BridgeSide.Right)
+})
+input.onButtonPressed(Button.A, function () {
+    basculeMotors.moveBasculeTo(BridgeSide.Left, 30)
+    basculeMotors.moveBasculeTo(BridgeSide.Right, 30)
+})
+input.onButtonPressed(Button.B, function () {
+    basculeMotors.moveBasculeTo(BridgeSide.Left, 60)
+    basculeMotors.moveBasculeTo(BridgeSide.Right, 60)
+})
+input.onButtonPressed(Button.AB, function () {
+    basculeMotors.moveBasculeTo(BridgeSide.Left, 0)
+    basculeMotors.moveBasculeTo(BridgeSide.Right, 0)
+})
+```
